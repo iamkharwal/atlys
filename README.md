@@ -10,8 +10,8 @@ A react project for dummy feed with authentication, which has two pages,
 Authentication is handled on client side through **LocalStorage** of browser
 - **users**: key stores array of users who have registered/signed up on app
   *(if users key is not present, there are no registered users)*
-- **userState**: key stores currently logged in user on app
-  *(if userState  key is not present, no user is logged in on app)*
+- **profile**: key stores currently logged in user on app
+  *(if profile  key is not present, no user is logged in on app)*
 
 **Note**: In order to log in, the user must be registered or signed up on the app.
 
@@ -27,8 +27,8 @@ Authentication is handled on client side through **LocalStorage** of browser
 - **Home** component renders main feed
 - **Auth** component renders authentication components
 
-3. **hocs**
-- **withAuth** HOC checks whether user is logged in or not
+3. **hooks**
+- **useProfile** to get current logged in user details
 
 4. **popups**
 - **AuthPopup** handles auth using Modal
