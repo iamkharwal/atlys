@@ -1,7 +1,7 @@
 /** @format */
 
 import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime"; // ✅ use 'plugin' not 'relativeTime' directly
+import relativeTime from "dayjs/plugin/relativeTime"; 
 
 dayjs.extend(relativeTime);
 
