@@ -1,0 +1,35 @@
+
+
+.popup-enter {
+  opacity: 0;
+  transform: scale(0.6);
+  transform-origin: center;
+}
+.popup-enter-active {
+  opacity: 1;
+  transform: scale(1.03);
+  transform-origin: center;
+  transition: transform 150ms ease-in-out;
+}
+.popup-enter-done {
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 150ms ease-in;
+}
+.popup-exit {
+  transform: scale(1);
+  transform-origin: center;
+  opacity: 1;
+}
+.popup-exit-active {
+  opacity: 0;
+  transform: scale(0.6);
+  transform-origin: center;
+  transition: transform 300ms ease-in-out,
+  opacity 300ms ease-in;
+}
+
+.relative{
+  position: relative;
+  z-index: 9;
+}

@@ -1,0 +1,14 @@
+/** @format */
+
+.root {
+  padding: 10px 10px 10px 10px;
+  background-color: #edededde;
+  border-radius: 30px;
+  min-width: 350px;
+  position: relative;
+  z-index: 1;
+}
+
+label {
+  font-weight: 600;
+}
