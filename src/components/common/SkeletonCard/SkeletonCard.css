@@ -1,0 +1,107 @@
+.cardSkeleton {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  margin: 0px auto 20px auto;
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+  background: #e6e9ee;
+}
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 250%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmerAnim 1.3s infinite linear;
+}
+
+@keyframes shimmerAnim {
+  from {
+    left: -150%;
+  }
+  to {
+    left: 150%;
+  }
+}
+
+/* header */
+.skeletonHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.skeletonAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.skeletonLines {
+  flex: 1;
+}
+.skeletonLine {
+  height: 12px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.skeletonLine.short {
+  width: 120px;
+  height: 6px;
+}
+.skeletonLine.tiny {
+  width: 80px;
+  height: 10px;
+}
+
+/* body */
+.skeletonBody {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.skeletonThumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.skeletonText {
+  flex: 1;
+}
+.skeletonText .skeletonLine:nth-child(1) {
+  width: 80%;
+}
+.skeletonText .skeletonLine:nth-child(2) {
+  width: 95%;
+}
+.skeletonText .skeletonLine:nth-child(3) {
+  width: 60%;
+}
+
+.skeletonFooter {
+  display: flex;
+  gap: 16px;
+}
+.skeletonIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+body {
+  background: #f7f8fa;
+}
